@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Dipa Apps</string>
+    <string name="verifikasi">Verifikasi login</string>
+    <string name="berhasil">Kode berhasil dikirim!</string>
 </resources>
