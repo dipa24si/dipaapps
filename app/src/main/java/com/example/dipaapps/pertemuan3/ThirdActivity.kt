@@ -25,12 +25,12 @@ class ThirdActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        // Inisialisasi komponen
+
         val inputNoTujuan: EditText = findViewById(R.id.inputNoTujuan)
         val btnKirim: Button = findViewById(R.id.btnKirim)
 
         binding.btnKirim.setOnClickListener {
-            //Mengambil value dari inputNama dan menampilkan di Logcat
+
             val nama = inputNoTujuan.text
             Log.e("Klik btnKirim", "Tombol berhasil di tekan. Isi dari inputNoTujuan = $nama")
 
