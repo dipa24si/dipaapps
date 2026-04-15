@@ -1,13 +1,9 @@
 package com.example.dipaapps.pertemuan_4
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.enableEdgeToEdge
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.dipaapps.MainActivity
 import com.example.dipaapps.databinding.ActivityFourthBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
@@ -19,14 +15,14 @@ class FourthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Log.e("onCreate", "FourthActivity dibuat pertama kali")
 
-        enableEdgeToEdge()
         binding = ActivityFourthBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.apply {
+            title = "Fourth Activity"
+            setDisplayHomeAsUpEnabled(true)
+            setDisplayShowHomeEnabled(true)
         }
 
         // Mengecek apakah Intent memiliki data sebelum mengambil dan menampilkannya
@@ -36,12 +32,6 @@ class FourthActivity : AppCompatActivity() {
             val age = intent.getIntExtra("age", 0)
 
             Log.e("Data Intent", "Nama: $name , Usia: $age, Asal: $from")
-        }
-
-        binding.btnKembali.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
         }
 
         binding.btnShowSnackbar.setOnClickListener {
@@ -64,6 +54,16 @@ class FourthActivity : AppCompatActivity() {
                     Log.e("Info Dialog","Anda memilih Tidak!")
                 }
                 .show()
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 

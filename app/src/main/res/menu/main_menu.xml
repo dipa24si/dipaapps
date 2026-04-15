@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_more"
+        android:title="More Options"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/sub_item_share"
+                android:title="Share App"
+                android:icon="@android:drawable/ic_menu_share" />
+            <item
+                android:id="@+id/sub_item_about"
+                android:title="About Us"
+                android:icon="@android:drawable/ic_menu_info_details" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="never" />
+</menu>
