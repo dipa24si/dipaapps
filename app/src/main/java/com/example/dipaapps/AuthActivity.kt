@@ -12,19 +12,11 @@ class AuthActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
-
-        val isLogin = sharedPref.getBoolean("isLogin", false)
-        if (isLogin) {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-            return
-        }
-
+        
         binding = ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val sharedPref = getSharedPreferences("user_pref", Context.MODE_PRIVATE)
 
         binding.btnLogin.setOnClickListener {
             val username = binding.etUsername.text.toString()
