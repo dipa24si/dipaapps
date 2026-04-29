@@ -1,5 +1,6 @@
-package com.example.dipaapps.pertemuan_5
+package com.example.dipaapps.home.pertemuan_5
 
+import android.R
 import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebViewClient
@@ -41,7 +42,7 @@ class WebViewActivity : AppCompatActivity() {
     // Tombol back di Toolbar
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            android.R.id.home -> {
+            R.id.home -> {
                 onBackPressed()
                 true
             }

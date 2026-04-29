@@ -1,4 +1,4 @@
-package com.example.dipaapps.pertemuan3
+package com.example.dipaapps.home.pertemuan3
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge

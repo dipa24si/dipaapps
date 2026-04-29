@@ -1,5 +1,6 @@
-package com.example.dipaapps.pertemuan3
+package com.example.dipaapps.home.pertemuan3
 
+import android.R
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -34,7 +35,7 @@ class ThirdActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            android.R.id.home -> {
+            R.id.home -> {
                 onBackPressedDispatcher.onBackPressed()
                 true
             }

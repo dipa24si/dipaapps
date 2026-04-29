@@ -1,4 +1,4 @@
-package com.example.dipaapps.pertemuan2
+package com.example.dipaapps.home.pertemuan2
 
 fun main() {
     println("Hai rekan rekanm...")

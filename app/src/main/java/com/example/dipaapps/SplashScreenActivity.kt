@@ -20,7 +20,7 @@ class SplashScreenActivity : AppCompatActivity() {
             delay(2000)
 
             val targetActivity = if (isLogin) {
-                MainActivity::class.java
+                BaseActivity::class.java
             } else {
                 AuthActivity::class.java
             }

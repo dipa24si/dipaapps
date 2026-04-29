@@ -1,4 +1,4 @@
-package com.example.dipaapps.pertemuan2
+package com.example.dipaapps.home.pertemuan2
 
 import android.os.Bundle
 import android.util.Log

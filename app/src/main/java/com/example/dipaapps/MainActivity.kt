@@ -9,11 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.dipaapps.databinding.ActivityMainBinding
-import com.example.dipaapps.pertemuan2.SecondActivity
-import com.example.dipaapps.pertemuan3.ThirdActivity
-import com.example.dipaapps.pertemuan_4.FourthActivity
-import com.example.dipaapps.pertemuan_5.FifthActivity
-import com.example.dipaapps.pertemuan_7.SeventhActivity
+import com.example.dipaapps.home.pertemuan2.SecondActivity
+import com.example.dipaapps.home.pertemuan3.ThirdActivity
+import com.example.dipaapps.home.pertemuan_4.FourthActivity
+import com.example.dipaapps.home.pertemuan_5.FifthActivity
+import com.example.dipaapps.home.pertemuan_7.SeventhActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

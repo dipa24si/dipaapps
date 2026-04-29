@@ -1,4 +1,4 @@
-package com.example.dipaapps.pertemuan_5
+package com.example.dipaapps.home.pertemuan_5
 
 import android.content.Intent
 import android.os.Bundle

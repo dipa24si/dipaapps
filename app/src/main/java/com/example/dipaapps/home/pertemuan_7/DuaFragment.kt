@@ -1,4 +1,4 @@
-package com.example.dipaapps.pertemuan_7
+package com.example.dipaapps.home.pertemuan_7
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
