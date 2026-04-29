@@ -9,7 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.dipaapps.databinding.ActivityMainBinding
+import com.example.dipaapps.pertemuan2.SecondActivity
+import com.example.dipaapps.pertemuan3.ThirdActivity
 import com.example.dipaapps.pertemuan_4.FourthActivity
+import com.example.dipaapps.pertemuan_5.FifthActivity
+import com.example.dipaapps.pertemuan_7.SeventhActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -28,12 +32,24 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        binding.btnToFourth.setOnClickListener {
-            val intent = Intent(this, FourthActivity::class.java)
-            intent.putExtra("name", "Politeknik Caltex Riau")
-            intent.putExtra("from", "Rumbai")
-            intent.putExtra("age", 25)
-            startActivity(intent)
+        binding.btnPertemuan2.setOnClickListener {
+            startActivity(Intent(this, SecondActivity::class.java))
+        }
+
+        binding.btnPertemuan3.setOnClickListener {
+            startActivity(Intent(this, ThirdActivity::class.java))
+        }
+
+        binding.btnPertemuan4.setOnClickListener {
+            startActivity(Intent(this, FourthActivity::class.java))
+        }
+
+        binding.btnPertemuan5.setOnClickListener {
+            startActivity(Intent(this, FifthActivity::class.java))
+        }
+
+        binding.btnPertemuan7.setOnClickListener {
+            startActivity(Intent(this, SeventhActivity::class.java))
         }
 
         binding.btnLogout.setOnClickListener {

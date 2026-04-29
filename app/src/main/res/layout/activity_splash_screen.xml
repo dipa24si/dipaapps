@@ -5,38 +5,104 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ocean_background"
+    android:background="@drawable/bg_splash_gradient"
     tools:context=".SplashScreenActivity">
 
-    <ImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/ic_launcher_foreground"
+    <!-- Decorative Background Circles (Simulating the HTML design) -->
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="@drawable/circle_blur_teal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-50dp" />
+
+    <View
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/circle_blur_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginStart="-50dp" />
+
+    <!-- Central Branding Anchor -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/ocean_primary" />
+        app:layout_constraintTop_toTopOf="parent">
 
+        <!-- Icon Container with Glassmorphism Effect -->
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/glass_effect_bg"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_foreground"
+                app:tint="@color/splash_accent" />
+        </FrameLayout>
+
+        <!-- Brand Identity -->
+        <TextView
+            android:id="@+id/tvBrandName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-black"
+            android:text="DipaApps"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:letterSpacing="-0.03" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="UNWAVERING DEPTH"
+            android:textColor="@color/splash_text_secondary"
+            android:textSize="12sp"
+            android:letterSpacing="0.2"
+            android:textAllCaps="true" />
+
+        <!-- Loading Indicator -->
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="60dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="48dp"
+            android:indeterminate="true"
+            android:progressTint="@color/splash_accent"
+            android:indeterminateTint="@color/splash_accent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="INITIALIZING"
+            android:textColor="@color/splash_text_secondary"
+            android:textSize="10sp"
+            android:letterSpacing="0.2" />
+
+    </LinearLayout>
+
+    <!-- Version Info -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Ocean Apps"
-        android:textColor="@color/ocean_text"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="Version 1.0"
-        android:textColor="@color/ocean_primary"
+        android:layout_marginBottom="24dp"
+        android:text="v 2.4.0"
+        android:textColor="#33FFFFFF"
+        android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
