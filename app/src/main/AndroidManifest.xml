@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dipaapps"
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,9 +16,9 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.DipaApps">
 
-        <!-- Mengembalikan SplashScreenActivity sebagai halaman utama -->
+        <!-- Splash Screen sebagai Gerbang Utama -->
         <activity
-            android:name=".AuthActivity"
+            android:name="com.example.dipaapps.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,40 +26,18 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".BaseActivity"
-            android:exported="false" />
+        <activity android:name="com.example.dipaapps.AuthActivity" />
+        <activity android:name="com.example.dipaapps.BaseActivity" />
+        <activity android:name="com.example.dipaapps.MainActivity" />
 
-        <activity
-            android:name=".SplashScreenActivity"
-            android:exported="false" />
+        <!-- Activity Pertemuan (Pastikan jalur folder benar) -->
+        <activity android:name="com.example.dipaapps.home.pertemuan_5.FifthActivity" />
+        <activity android:name="com.example.dipaapps.home.pertemuan_5.WebViewActivity" />
+        <activity android:name="com.example.dipaapps.home.pertemuan_4.FourthActivity" />
+        <activity android:name="com.example.dipaapps.home.pertemuan3.ThirdActivity" />
+        <activity android:name="com.example.dipaapps.home.pertemuan3.ThirdResultActivity" />
+        <activity android:name="com.example.dipaapps.home.pertemuan2.SecondActivity" />
 
-        <activity
-            android:name=".home.pertemuan_9.NinthActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".home.pertemuan_7.SeventhActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".home.pertemuan_5.WebViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".home.pertemuan_5.FifthActivity"
-            android:exported="false" />
-        <activity
-            android:name=".home.pertemuan_4.FourthActivity"
-            android:exported="false" />
-        <activity
-            android:name=".home.pertemuan3.ThirdResultActivity"
-            android:exported="false" />
-        <activity
-            android:name=".home.pertemuan3.ThirdActivity"
-            android:exported="false" />
-        <activity
-            android:name=".home.pertemuan2.SecondActivity"
-            android:exported="false"/>
     </application>
 
 </manifest>

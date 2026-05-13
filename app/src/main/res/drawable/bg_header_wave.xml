@@ -3,15 +3,7 @@
     android:height="100dp"
     android:viewportWidth="100"
     android:viewportHeight="100">
-
     <path
-        android:fillColor="?attr/colorPrimary"
-        android:pathData="
-            M0,0
-            L100,0
-            L100,40
-            C 75,55
-              25,20
-              0,40
-            Z" />
+        android:fillColor="@color/ocean_primary"
+        android:pathData="M0,0 L100,0 V70 Q75,85 50,70 T0,70 Z" />
 </vector>

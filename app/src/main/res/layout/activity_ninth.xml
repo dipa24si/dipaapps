@@ -7,11 +7,11 @@
     android:background="@color/ocean_background"
     tools:context=".home.pertemuan_9.NinthActivity">
 
-    <!-- Header Background Wave -->
+    <!-- Header Background Wave (Lowered height to 100dp) -->
     <View
         android:id="@+id/background_header"
-        android:layout_width="0dp"
-        android:layout_height="220dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
         android:background="@drawable/bg_header_wave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,18 +27,21 @@
         app:titleTextColor="@android:color/white"
         app:navigationIcon="?attr/homeAsUpIndicator" />
 
+    <!-- Form Login (Increased marginTop to 100dp to ensure it's below the wave) -->
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="35dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="64dp"
         android:hint="Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:startIconDrawable="@drawable/ic_edit">
+        app:startIconDrawable="@drawable/ic_edit"
+        app:startIconTint="@color/ocean_primary">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etEmail"
@@ -53,15 +56,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="35dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:hint="Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-        app:startIconDrawable="@drawable/ic_edit">
+        app:startIconDrawable="@drawable/ic_edit"
+        app:startIconTint="@color/ocean_primary"
+        app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail2"
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />
@@ -70,11 +75,14 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_marginHorizontal="35dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:text="Login"
+        android:textAllCaps="false"
+        app:cornerRadius="28dp"
         app:icon="@drawable/ic_login"
+        app:iconGravity="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
@@ -83,7 +91,7 @@
         android:id="@+id/chipGroupFilter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
@@ -116,11 +124,12 @@
     <EditText
         android:id="@+id/etCustom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginHorizontal="35dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_background"
         android:hint="Nomor Telepon"
+        android:paddingHorizontal="16dp"
         app:layout_constraintTop_toBottomOf="@id/chipGroupFilter" />
 
     <androidx.gridlayout.widget.GridLayout
@@ -128,36 +137,55 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         app:columnCount="3"
-        app:useDefaultMargins="true"
-        app:layout_constraintTop_toBottomOf="@id/etCustom">
+        app:layout_constraintTop_toBottomOf="@id/etCustom"
+        app:useDefaultMargins="true">
 
         <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_height="wrap_content"
             android:text="Menu 1"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
         <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:text="Menu 2"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
         <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:text="Menu 3"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
         <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:text="Menu 4"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
         <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:text="Menu 5"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
         <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:text="Menu 6"
+            android:textAllCaps="false"
+            app:cornerRadius="12dp"
             app:layout_columnWeight="1"
             app:layout_gravity="fill_horizontal" />
 
