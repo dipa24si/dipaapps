@@ -16,6 +16,7 @@ import com.example.dipaapps.home.pertemuan3.ThirdActivity
 import com.example.dipaapps.home.pertemuan_4.FourthActivity
 import com.example.dipaapps.home.pertemuan_5.FifthActivity
 import com.example.dipaapps.home.pertemuan_7.SeventhActivity
+import com.example.dipaapps.home.pertemuan_9.NinthActivity
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -57,6 +58,10 @@ class HomeFragment : Fragment() {
 
         binding.btnPertemuan7.setOnClickListener {
             startActivity(Intent(requireContext(), SeventhActivity::class.java))
+        }
+
+        binding.btnPertemuan9.setOnClickListener {
+            startActivity(Intent(requireContext(), NinthActivity::class.java))
         }
 
         binding.btnLogout.setOnClickListener {

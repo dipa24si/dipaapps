@@ -17,7 +17,7 @@
 
         <!-- Mengembalikan SplashScreenActivity sebagai halaman utama -->
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".AuthActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,11 @@
             android:exported="false" />
 
         <activity
-            android:name=".AuthActivity"
+            android:name=".SplashScreenActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".home.pertemuan_9.NinthActivity"
             android:exported="false" />
 
         <activity
@@ -42,7 +46,7 @@
             android:exported="false" />
         <activity
             android:name=".home.pertemuan_5.FifthActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".home.pertemuan_4.FourthActivity"
             android:exported="false" />
@@ -54,7 +58,7 @@
             android:exported="false" />
         <activity
             android:name=".home.pertemuan2.SecondActivity"
-            android:exported="true" />
+            android:exported="false"/>
     </application>
 
 </manifest>
