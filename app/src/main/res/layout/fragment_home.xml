@@ -131,6 +131,19 @@
         app:layout_constraintTop_toBottomOf="@+id/btnPertemuan7" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnPertemuan10"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/button_background"
+        android:text="Pertemuan 10"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPertemuan9" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLogout"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
@@ -141,6 +154,6 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnPertemuan9" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPertemuan10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

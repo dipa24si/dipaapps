@@ -13,6 +13,7 @@ import com.example.dipaapps.AuthActivity
 import com.example.dipaapps.databinding.FragmentHomeBinding
 import com.example.dipaapps.home.pertemuan2.SecondActivity
 import com.example.dipaapps.home.pertemuan3.ThirdActivity
+import com.example.dipaapps.home.pertemuan_10.TenthActivity
 import com.example.dipaapps.home.pertemuan_4.FourthActivity
 import com.example.dipaapps.home.pertemuan_5.FifthActivity
 import com.example.dipaapps.home.pertemuan_7.SeventhActivity
@@ -62,6 +63,10 @@ class HomeFragment : Fragment() {
 
         binding.btnPertemuan9.setOnClickListener {
             startActivity(Intent(requireContext(), NinthActivity::class.java))
+        }
+
+        binding.btnPertemuan10.setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
 
         binding.btnLogout.setOnClickListener {

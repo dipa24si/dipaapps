@@ -31,6 +31,9 @@
         <activity android:name="com.example.dipaapps.MainActivity" />
 
         <!-- Activity Pertemuan (Pastikan jalur folder benar) -->
+        <activity android:name="com.example.dipaapps.home.pertemuan_10.TenthActivity" />
+        <activity android:name="com.example.dipaapps.home.pertemuan_9.NinthActivity" />
+        <activity android:name="com.example.dipaapps.home.pertemuan_7.SeventhActivity" />
         <activity android:name="com.example.dipaapps.home.pertemuan_5.FifthActivity" />
         <activity android:name="com.example.dipaapps.home.pertemuan_5.WebViewActivity" />
         <activity android:name="com.example.dipaapps.home.pertemuan_4.FourthActivity" />
