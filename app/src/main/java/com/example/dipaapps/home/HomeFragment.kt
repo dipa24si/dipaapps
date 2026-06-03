@@ -6,10 +6,15 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dipaapps.AuthActivity
+import com.example.dipaapps.data.api.CatFactApiClient
+import com.example.dipaapps.data.api.PhotoApiClient
 import com.example.dipaapps.databinding.FragmentHomeBinding
 import com.example.dipaapps.home.pertemuan2.SecondActivity
 import com.example.dipaapps.home.pertemuan3.ThirdActivity
@@ -18,6 +23,8 @@ import com.example.dipaapps.home.pertemuan_4.FourthActivity
 import com.example.dipaapps.home.pertemuan_5.FifthActivity
 import com.example.dipaapps.home.pertemuan_7.SeventhActivity
 import com.example.dipaapps.home.pertemuan_9.NinthActivity
+import com.example.dipaapps.home.photo.PhotoAdapter
+import kotlinx.coroutines.launch
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -40,6 +47,14 @@ class HomeFragment : Fragment() {
         }
 
         val sharedPref = requireContext().getSharedPreferences("user_pref", Context.MODE_PRIVATE)
+
+        // Load data on start
+        loadCatFact()
+        loadPhoto()
+
+        binding.btnRefresh.setOnClickListener {
+            loadCatFact()
+        }
 
         binding.btnPertemuan2.setOnClickListener {
             startActivity(Intent(requireContext(), SecondActivity::class.java))
@@ -86,6 +101,34 @@ class HomeFragment : Fragment() {
                 }
                 .setNegativeButton("Tidak", null)
                 .show()
+        }
+    }
+
+    private fun loadCatFact() {
+        binding.tvCatFact.text = "Loading cat fact..."
+        lifecycleScope.launch {
+            try {
+                val response = CatFactApiClient.apiService.getCatFact()
+                binding.tvCatFact.text = "\"${response.fact}\""
+            } catch (e: Exception) {
+                binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+            }
+        }
+    }
+
+    private fun loadPhoto() {
+        lifecycleScope.launch {
+            try {
+                val photos = PhotoApiClient.apiService.getPhotos()
+                val adapter = PhotoAdapter(photos)
+                binding.rvGallery.adapter = adapter
+                
+                // Mengubah LayoutManager menjadi Horizontal
+                binding.rvGallery.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+            } catch (e: Exception) {
+                Toast.makeText(requireContext(), "Gagal memuat gambar", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
