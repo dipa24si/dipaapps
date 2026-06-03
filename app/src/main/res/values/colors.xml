@@ -32,4 +32,6 @@
     <color name="colorPrimary">#0077BE</color>
     <color name="colorPrimaryDark">#005A91</color>
     <color name="colorAccent">#00B8D4</color>
+
+    <color name="abu_gelap">#424242</color>
 </resources>

@@ -40,6 +40,7 @@
         <activity android:name="com.example.dipaapps.home.pertemuan3.ThirdActivity" />
         <activity android:name="com.example.dipaapps.home.pertemuan3.ThirdResultActivity" />
         <activity android:name="com.example.dipaapps.home.pertemuan2.SecondActivity" />
+        <activity android:name="com.example.dipaapps.message.tutorial.TutorialMessageActivity" />
 
     </application>
 
