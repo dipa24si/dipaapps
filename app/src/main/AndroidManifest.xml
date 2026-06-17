@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +19,16 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.DipaApps">
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <!-- Splash Screen sebagai Gerbang Utama -->
         <activity
@@ -30,7 +44,11 @@
         <activity android:name="com.example.dipaapps.BaseActivity" />
         <activity android:name="com.example.dipaapps.MainActivity" />
 
+        <!-- Note Feature -->
+        <activity android:name="com.example.dipaapps.note.NoteFormActivity" />
+
         <!-- Activity Pertemuan (Pastikan jalur folder benar) -->
+        <activity android:name="com.example.dipaapps.home.pertemuan_13.ThirteenthActivity" />
         <activity android:name="com.example.dipaapps.home.pertemuan_10.TenthActivity" />
         <activity android:name="com.example.dipaapps.home.pertemuan_9.NinthActivity" />
         <activity android:name="com.example.dipaapps.home.pertemuan_7.SeventhActivity" />

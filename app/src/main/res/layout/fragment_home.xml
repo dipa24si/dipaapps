@@ -137,6 +137,16 @@
                     android:textAllCaps="false"
                     app:layout_columnWeight="1" />
 
+                <Button
+                    android:id="@+id/btnPertemuan13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:backgroundTint="#FF9800"
+                    android:text="Pertemuan 13"
+                    android:textAllCaps="false"
+                    app:layout_columnWeight="1" />
+
             </androidx.gridlayout.widget.GridLayout>
 
             <TextView
