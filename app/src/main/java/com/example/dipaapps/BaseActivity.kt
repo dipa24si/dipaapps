@@ -1,7 +1,6 @@
 package com.example.dipaapps
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,6 +10,7 @@ import com.example.dipaapps.databinding.ActivityBaseBinding
 import com.example.dipaapps.home.HomeFragment
 import com.example.dipaapps.message.MessageFragment
 import com.example.dipaapps.more.MoreFragment
+import com.example.dipaapps.note.NoteFragment
 
 class BaseActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBaseBinding
@@ -23,7 +23,6 @@ class BaseActivity : AppCompatActivity() {
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            // Sesuaikan systemBars.bottom menjadi 0 sesuai instruksi
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
@@ -43,6 +42,10 @@ class BaseActivity : AppCompatActivity() {
                     replaceFragment(MessageFragment())
                     true
                 }
+                R.id.note -> {
+                    replaceFragment(NoteFragment())
+                    true
+                }
                 R.id.more -> {
                     replaceFragment(MoreFragment())
                     true
@@ -55,7 +58,6 @@ class BaseActivity : AppCompatActivity() {
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)
-            //.addToBackStack(null) -> dinonaktifkan agar saat back langsung keluar aplikasi
             .commit()
     }
 }
